@@ -12,7 +12,8 @@
     ".pi/**",
     ".roo/**",
     ".windsurf/**",
-    "tools/oxlint/anti-slop/**"
+    "tools/oxlint/anti-slop/**",
+    "**/dist/**"
   ],
   "plugins": ["typescript", "unicorn", "oxc"],
   "jsPlugins": [

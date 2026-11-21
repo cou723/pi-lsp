@@ -2,6 +2,8 @@
 node_modules/
 # Build Output
 dist/
+!packages/pi-lsp/dist/
+!packages/pi-lsp/dist/**
 # Code Coverage
 coverage/
 # NPM Packs
