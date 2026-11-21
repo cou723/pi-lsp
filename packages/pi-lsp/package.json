@@ -33,7 +33,9 @@
   },
   "scripts": {
     "test": "vitest run",
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build": "node scripts/build-bundle.mjs",
+    "prepack": "pnpm run build"
   },
   "dependencies": {
     "@ian-pascoe/pi-utils": "^0.10.0",
@@ -41,7 +43,8 @@
     "vscode-languageserver-protocol": "^3.18.4"
   },
   "devDependencies": {
-    "@types/cross-spawn": "^6.0.6"
+    "@types/cross-spawn": "^6.0.6",
+    "esbuild": "^0.28.2"
   },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": ">=1.1.0",
@@ -53,7 +56,7 @@
   },
   "pi": {
     "extensions": [
-      "./src/index.ts"
+      "./dist/index.js"
     ],
     "skills": [
       "./skills"
